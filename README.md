@@ -135,27 +135,6 @@ Private repo access is not allowed
 
 GitHub returns 404 / 403 / 500 etc.
 
-✔ Clean Architecture
-
-Service layer (GitHubService) handles all API calls
-
-Controller only handles request/response
-
-Views are simple and readable
-
-📁 Project Structure
-app/
- ├── Http/
- │     └── Controllers/
- │           └── IssueController.php
- └── Services/
-        └── GitHubService.php
-
-resources/
- └── views/
-        └── issues/
-             ├── index.blade.php
-             └── show.blade.php
 
 ✔ Coding Test Requirements Checklist
 Requirement	Status
