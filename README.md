@@ -189,19 +189,3 @@ Follow the instructions above to generate your own GitHub token
 The app supports both private and public repo issues
 
 Code includes comments and clear separation of concerns
-
-🙌 Author
-
-Your Name
-GitHub: https://github.com/your-username
-
-Email: your-email@example.com
-
-If you want, I can:
-
-✨ Add screenshots
-✨ Add project architecture diagram
-✨ Improve formatting
-✨ Insert badges (build status, version, etc.)
-
-Just let me know!
