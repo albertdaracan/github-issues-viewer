@@ -91,6 +91,17 @@ class GitHubService
         return $result ?: null;
     }
 
+    public function updateIssues()
+    {
+        // $response = Http::withHeaders($this->headers())
+        //     ->update("https://api.github.com/repos/{$owner}/{$repo}/issues/{$issue}");
+
+        // $result = $this->handleResponse($response);
+
+        // return $result ?: null;
+
+    }
+
     /**
      * Centralized API response handler.
      *

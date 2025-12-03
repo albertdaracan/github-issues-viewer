@@ -14,3 +14,7 @@ Route::get('/', [IssueController::class, 'index'])->name('issues.index');
 Route::get('/issue/{owner}/{repo}/{issue}', [IssueController::class, 'show'])
     ->where('issue', '[0-9]+')
     ->name('issues.show');
+
+
+// Issues list
+Route::post('/updateIssue', [IssueController::class, 'update'])->name('issues.update');

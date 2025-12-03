@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Http\Request;
 use App\Services\GitHubService;
 
 /**
@@ -34,8 +34,13 @@ class IssueController extends Controller
         
         try {
             // Fetch issues from the service
+           
             $issues = $this->github->getAssignedOpenIssues();
-
+            // echo "<pre>";
+            // var_dump($issues);
+            // echo "</pre>";
+            // exit;
+            
         } catch (\Exception $e) {
             // Display error message in view
             return view('issues.index', [
@@ -76,5 +81,12 @@ class IssueController extends Controller
 
         // Render the detailed issue view
         return view('issues.show', ['issue' => $issueData]);
+    }
+
+    public function update(Request $request)
+    {   
+        // echo "<pre>";
+        // var_dump($request);
+        // echo "</pre>";
     }
 }

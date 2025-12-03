@@ -17,7 +17,11 @@
             <div class="list-group">
 
         @foreach ($issues as $issue)
-            <a href="{{ route('issues.show', [
+            <?php
+            //var_dump()
+            if(!array_search('wontfix', array_column($issue['labels'], 'name')) !== FALSE) {
+                ?>
+                     <a href="{{ route('issues.show', [
                 'owner' => $issue['repository']['owner']['login'],
                 'repo' => $issue['repository']['name'],
                 'issue' => $issue['number']
@@ -33,6 +37,11 @@
                     {{ $issue['repository']['owner']['login'] }}/{{ $issue['repository']['name'] }}
                 </small>
             </a>
+                
+            <?php } 
+            ?>
+                
+           
         @endforeach
 
     </div>
